@@ -52,10 +52,11 @@ function criptografar() {
   this.res = this.mostrar;
   this.texto = this.res;
   // console.log(this.mostrar);
-  document.getElementById('output').textContent = this.res;
   console.log(res);
   console.log(titulo);
   
+    
+  salvar();
 }
 
 function descriptografar() {
@@ -90,6 +91,10 @@ function descriptografar() {
     
     console.log(res);
     console.log(titulo);
+
+    
+    
+    salvar();
   }
 
 function salvar() {
@@ -101,6 +106,8 @@ function salvar() {
     let blob = new Blob([texto], { type: "text/plain;charset=utf-8" });
 
     saveAs(blob, titulos);
+
+    limpar();
 
  }
 
